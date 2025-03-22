@@ -1,3 +1,51 @@
+'''
+
+VTI (Video To Images):
+====================
+
+
+Problem:    
+            When an AI-ML beginner aspirant needs somewhat to 
+            make easy its data collection regarding images for CNN model than that programmer spend its maximum time 
+            to collect well labeled data for his project.
+
+            
+
+Solution:   
+            By the usage of my current knowledge I made a smalland basic tool that helps to fetch a lot (hundreds or 
+            thousands) of images in few seconds or minutes fromlive camera or the recoded videos.
+
+            I named this tool VTI (Video To Images), that's easyto use (user friendly) and this tool is open-source.
+
+
+            
+
+Technologies used in this tool:
+
+            - Python
+            - Computer Vision (opencv-python)
+            - Numeric Python (Numpy)
+            - Tkinter [for GUI]
+            - MTCNN [for human face detection]
+            - other modules (os, datetime, webbrowser)
+
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+# importing packages or required functions
+
 import webbrowser 
 import cv2 as cv
 
@@ -9,12 +57,11 @@ from tkinter import messagebox, ttk
 from os import path, remove, walk
 from os.path import exists
 from datetime import datetime
-from scripts import DataCollection
 
 
 
 # some variables
-APP_NAME = "Video to Image (Beta ver)"
+APP_NAME = "Video to Image (Beta version)"
 logo_path = "vdo2img"
 ENTRY_COMMON_WIDTH = 20
 # declaring headings
@@ -46,11 +93,12 @@ class VideoToImageApp:
     DEFAULT_IMAGE_TYPE = ""
     DEFAULT_RECORD_TYPE = ""
     DEFAULT_NUMBER_OF_IMAGES = 100
-    DEFAULT_IMAGES_PREFIX = ""
-    DEFAULT_RESIZE_VALUE = ""
-    DEFAULT_VIDEO_MOTION = ""
-    DEFAULT_EXTENSION = ""
-    DEFAULT_SHOW_WINDOW = ""
+    DEFAULT_IMAGES_PREFIX = "image"
+    DEFAULT_RESIZE_VALUE = "auto"
+    DEFAULT_VIDEO_MOTION = "normal"
+    DEFAULT_EXTENSION = "png"
+    DEFAULT_SHOW_WINDOW = 1
+    DEFAULT_SHOW_INSTANT_UPDATES = 1
 
 
 
@@ -82,14 +130,14 @@ class VideoToImageApp:
         short_desc_label = Label(root, text=short_desc, font=small, justify='left')
 
         # Defining buttons
-        learn_more_btn = Button(root, text='Learn more', font=x_small, borderwidth=0)
+        # learn_more_btn = Button(root, text='Learn more', font=x_small, borderwidth=0)
         get_started_btn = Button(root, text='Get started', font=x_small, borderwidth=0, command=self.working_window)
 
         # plotting all them
         APP_NAME_label.grid(row=1, column=1, columnspan=3, pady=50)
         short_desc_label.grid(row=2, column=1, columnspan=3, padx=20)
-        learn_more_btn.grid(row=5, column=3, ipady=5, padx=5, pady=150)
-        get_started_btn.grid(row=5, column=3, sticky='e', ipady=5)
+        # learn_more_btn.grid(row=5, column=3, ipady=5, padx=5, pady=150)
+        get_started_btn.grid(row=5, column=3, sticky='e', pady=150, ipady=5)
 
         root.mainloop()
 
@@ -304,6 +352,33 @@ class VideoToImageApp:
 
 
     
+
+
+
+
+    
+
+
+    # ================================== About: window ==================== #
+
+    def about_window(self) -> None:
+        ''' This is the about window contains information for VTI '''
+
+        # creating instance of Tk class for this about window
+        window = Tk()
+        window.geometry('900x700')
+        window.title(APP_NAME)
+
+        # addind common navbar
+        self.add_navbar(window)
+
+        # fetching the doc string 
+        content: str = __doc__ 
+
+        Label(window, text=content, font=x_small, justify='left').pack()
+
+
+
 
 
 
@@ -747,7 +822,7 @@ class VideoToImageApp:
         # Adding File Menu and commands 
         options = Menu(menubar, tearoff = 0)
         menubar.add_cascade(label ='Menu', menu = options, font = common_font_for_navbar)
-        options.add_command(label='How to use?',  font = common_font_for_navbar, command=lambda: webbrowser.open(''))
+        options.add_command(label='About VTI',  font = common_font_for_navbar, command=self.about_window)
         options.add_cascade(label="Social",  font = common_font_for_navbar, menu=social)
         options.add_separator()
         options.add_command(label="Exit", font = common_font_for_navbar, command = window.destroy)
@@ -771,6 +846,15 @@ class VideoToImageApp:
         messagebox.showinfo(APP_NAME, msg)
 
         
-        
 
-VideoToImageApp()
+
+
+
+
+
+
+if __name__ == "__main__":
+
+    VideoToImageApp()   
+
+    # print(__doc__)
