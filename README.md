@@ -11,7 +11,7 @@ When an AI-ML beginner aspirant needs somewhat to make easy its data collection 
 
 ### Solution:   
 
-By the usage of my current knowledge I made a smalland basic tool that helps to fetch a lot (hundreds or thousands) of images in few seconds or minutes fromlive camera or the recoded videos. I named this tool VTI (Video To Images), that's easyto use (user friendly) and this tool is open-source.
+By the usage of my current knowledge I made a small and basic tool that helps to fetch a lot (hundreds or thousands) of images in few seconds or minutes from live camera or the recoded videos. I named this tool VTI (Video To Images), that's easy to use (user friendly) and this tool is open-source.
 
 
             
