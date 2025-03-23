@@ -286,7 +286,7 @@ class VideoToImageApp:
         # ------------- allocating widgets ------------- #
         
         # r-1
-        APP_NAME_label.grid(row=1, column=1, columnspan=6, pady=20, padx=50)
+        APP_NAME_label.grid(row=1, column=1, columnspan=2, pady=20, padx=50)
         
         # r-2
         general_instructions_label.grid(row=2, column=1, columnspan=3, pady=50, padx=10)
