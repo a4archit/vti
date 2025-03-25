@@ -283,6 +283,11 @@ class VideoToImageApp:
 
 
         
+
+
+
+
+        
         # ------------- allocating widgets ------------- #
         
         # r-1
@@ -603,7 +608,7 @@ class VideoToImageApp:
         while True:
             if count == total_imgs :
                 break
-            if iter_count_diff == 10:
+            if iter_count_diff == 50:
                 instant_msg = "Face not detected from last 10 images that's why process stop."
                 break
             ret,frame = capture.read()
