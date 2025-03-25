@@ -1,0 +1,4 @@
+mtcnn 
+tkinter
+webbrowser
+opencv-python
