@@ -24,3 +24,16 @@ By the usage of my current knowledge I made a small and basic tool that helps to
   - Tkinter [for GUI]
   - MTCNN [for human face detection]
   - other modules (os, datetime, webbrowser)
+
+
+
+
+
+
+
+
+
+
+
+
+
