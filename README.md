@@ -3,20 +3,25 @@
 Current version: Beta version
 
 
-### Problem:    
+## Problem:    
 
 When an AI-ML beginner aspirant needs somewhat to make easy its data collection regarding images for CNN model than that programmer spend its maximum time to collect well labeled data for his project.
 
             
 
-### Solution:   
+## Solution:   
 
 By the usage of my current knowledge I made a small and basic tool that helps to fetch a lot (hundreds or thousands) of images in few seconds or minutes from live camera or the recoded videos. I named this tool VTI (Video To Images), that's easy to use (user friendly) and this tool is open-source.
 
 
+> [!NOTE]
+> If you are interested in this project, you're most **welcome**
+> 
+> Feel free to reach out me. 😄👍
+
             
 
-### Technologies used in this tool:
+## Technologies used in this tool:
 
   - Python
   - Computer Vision (opencv-python)
@@ -28,9 +33,8 @@ By the usage of my current knowledge I made a small and basic tool that helps to
 
 
 
-### How to use VTI
-
-#### Step 1: Download and Install Dependencies
+## How to use VTI
+### Step 1: Download and Install Dependencies
 
 If you haven’t installed the required libraries yet, follow these steps to install them.
 
@@ -39,16 +43,18 @@ If you haven’t installed the required libraries yet, follow these steps to ins
 ```
 pip install opencv-python numpy mtcnn tensorflow
 ```
- ```
+
+3. Tkinter is a pre-installed library and you also installed it by prompt this command (if you can not have it):
+```
 pip install tk
 ```
 
-#### Step 2: Install source code
+### Step 2: Install source code
 
 Download source code file [vti.py](vti.py)
 
 
-#### Step 3: Now execute the file
+### Step 3: Now execute the file
 To execute the file follow this command in your terminal or the powershell
 1. In windows
 ```
